@@ -169,3 +169,17 @@ input[name='r'] {
 #r5:checked ~ .slider__bottom .slider__dots #radio5 {
 	opacity: 1;
 }
+
+@media (max-width: 768px) {
+	.slider__bottom {
+		flex-direction: column-reverse;
+	}
+
+	.slider__dots {
+		margin-top: 15px;
+	}
+
+	.slider__text-block {
+		font-size: 16px;
+	}
+}
