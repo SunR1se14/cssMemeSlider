@@ -20,3 +20,152 @@ img {
 	align-items: center;
 	padding: 20px;
 }
+
+.slider {
+	border: 2px solid #fff;
+	border-radius: 10px;
+	overflow: hidden;
+	width: 700px;
+}
+
+.slider__main {
+	display: flex;
+	width: 500%;
+	overflow: hidden;
+	border-bottom: 1px solid #fff;
+}
+
+.slide__img {
+	width: 20%;
+	transition: all 0.35s ease-in;
+}
+
+.slide__img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.slider__bottom {
+	display: flex;
+	align-items: center;
+	padding: 15px;
+	gap: 15px;
+}
+
+.slider__text-wrapper {
+	overflow: hidden;
+}
+
+.slider__text-items {
+	overflow: hidden;
+	width: 500%;
+	display: flex;
+}
+
+.slider__text-block {
+	width: 20%;
+	transition: all 0.35s ease-in;
+	font-size: 16px;
+}
+
+.slider__dots {
+	display: flex;
+	align-items: center;
+}
+
+.dot {
+	padding: 10px;
+}
+
+.dot__radio {
+	display: block;
+	width: 20px;
+	height: 10px;
+	border-radius: 8px;
+	background-color: #fff;
+	opacity: 0.3;
+	transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+
+.dot:hover .dot__radio,
+.dot__radio:hover {
+	opacity: 1;
+	transform: scale(1.15);
+}
+
+.dot:hover {
+	cursor: pointer;
+}
+
+.dot:active .dot__radio,
+.dot__radio:active {
+	background-color: transparent;
+	border: 1px solid #fff;
+}
+
+input[name='r'] {
+	display: none;
+	visibility: hidden;
+	opacity: 0;
+}
+
+#r1:checked ~ .slider__main .s1 {
+	margin-left: 0;
+}
+
+#r1:checked ~ .slider__bottom .slider__text-wrapper .t1 {
+	margin-left: 0;
+}
+
+#r1:checked ~ .slider__bottom .slider__dots #radio1 {
+	opacity: 1;
+}
+
+#r2:checked ~ .slider__main .s1 {
+	margin-left: -20%;
+}
+
+#r2:checked ~ .slider__bottom .slider__text-wrapper .t1 {
+	margin-left: -20%;
+}
+
+#r2:checked ~ .slider__bottom .slider__dots #radio2 {
+	opacity: 1;
+}
+
+#r3:checked ~ .slider__main .s1 {
+	margin-left: calc(-20% * 2);
+}
+
+#r3:checked ~ .slider__bottom .slider__text-wrapper .t1 {
+	margin-left: calc(-20% * 2);
+}
+
+#r3:checked ~ .slider__bottom .slider__dots #radio3 {
+	opacity: 1;
+}
+
+#r4:checked ~ .slider__main .s1 {
+	margin-left: calc(-20% * 3);
+}
+
+#r4:checked ~ .slider__bottom .slider__text-wrapper .t1 {
+	margin-left: calc(-20% * 3);
+}
+
+#r4:checked ~ .slider__bottom .slider__dots #radio4 {
+	opacity: 1;
+}
+
+#r5:checked ~ .slider__main .s1 {
+	margin-left: calc(-20% * 4);
+}
+
+#r5:checked ~ .slider__bottom .slider__text-wrapper .t1 {
+	margin-left: calc(-20% * 4);
+}
+
+#r5:checked ~ .slider__bottom .slider__dots #radio5 {
+	opacity: 1;
+}
